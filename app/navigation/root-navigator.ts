@@ -1,12 +1,8 @@
-import { createStackNavigator } from "react-navigation"
-import { ExampleNavigator } from "./example-navigator"
+import { createSwitchNavigator } from "react-navigation"
+import { SplashScreen } from "../screens/splash-screen/splash-screen"
+import { AppNavigator } from "./app-navigator"
 
-export const RootNavigator = createStackNavigator(
-  {
-    exampleStack: { screen: ExampleNavigator },
-  },
-  {
-    headerMode: "none",
-    navigationOptions: { gesturesEnabled: false },
-  },
-)
+export const RootNavigator = createSwitchNavigator({
+  Splash: SplashScreen,
+  App: AppNavigator,
+})

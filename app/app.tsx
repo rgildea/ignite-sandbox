@@ -5,12 +5,12 @@
 import "./i18n"
 import * as React from "react"
 import { AppRegistry } from "react-native"
+import { Provider } from "mobx-react"
+import { contains } from "ramda"
 import { StatefulNavigator } from "./navigation"
 import { StorybookUIRoot } from "../storybook"
 import { RootStore, setupRootStore } from "./models/root-store"
-import { Provider } from "mobx-react"
 import { BackButtonHandler } from "./navigation/back-button-handler"
-import { contains } from "ramda"
 import { DEFAULT_NAVIGATION_CONFIG } from "./navigation/navigation-config"
 
 interface AppState {
@@ -84,4 +84,3 @@ const SHOW_STORYBOOK = false
 
 const RootComponent = SHOW_STORYBOOK && __DEV__ ? StorybookUIRoot : App
 AppRegistry.registerComponent(APP_NAME, () => RootComponent)
-

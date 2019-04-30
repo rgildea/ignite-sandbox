@@ -1,0 +1,9 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "react/require-extension": "off",
+    "quotes": ["warn", "double", { "avoidEscape": true }],
+    "semi": ["warn", "never"]
+  },
+  "plugins": ["react", "jsx-a11y", "import"]
+}
