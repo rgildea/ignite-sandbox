@@ -7,6 +7,7 @@ import * as React from "react"
 import { AppRegistry } from "react-native"
 import { Provider } from "mobx-react"
 import { contains } from "ramda"
+import SplashScreen from "react-native-splash-screen"
 import { StatefulNavigator } from "./navigation"
 import { StorybookUIRoot } from "../storybook"
 import { RootStore, setupRootStore } from "./models/root-store"
@@ -29,6 +30,7 @@ export class App extends React.Component<{}, AppState> {
     this.setState({
       rootStore: await setupRootStore(),
     })
+    SplashScreen.hide()
   }
 
   /**
